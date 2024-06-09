@@ -76,20 +76,20 @@ TEMPLATES = [
 WSGI_APPLICATION = 'codestar.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
+Database
+https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("postgres://uinuum7efoq:U1nk83cpkQuJ@ep-gentle-mountain-a23bxz6h.eu-central-1.aws.neon.tech/swim_kick_curry_52392"))
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
+
+
+# DATABASES = {
+#     'default': dj_database_url.parse(os.environ.get("postgres://uinuum7efoq:U1nk83cpkQuJ@ep-gentle-mountain-a23bxz6h.eu-central-1.aws.neon.tech/swim_kick_curry_52392"))
+# }
 
 
 # Password validation
