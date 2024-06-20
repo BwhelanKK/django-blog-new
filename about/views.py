@@ -1,14 +1,13 @@
 from django.shortcuts import render
 from .models import About
-
 # Create your views here.
+
+
 def about_me(request):
     """
-Render about page
-
+    Renders the About page
     """
-
-    queryset = About.objects.all().order_by('-updated_on').first()
+    about = About.objects.all().order_by('-updated_on').first()
 
     return render(
         request,
